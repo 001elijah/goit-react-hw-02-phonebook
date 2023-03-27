@@ -12,10 +12,12 @@ class Filter extends Component {
     
     render() {
         return (
-            <label htmlFor="">
-                Find contacts by name
-                <input type="text" onChange={this.handleInput}/>
-            </label>
+            <form>
+                <label htmlFor="">
+                    Find contacts by name<br />
+                    <input type="text" onChange={this.handleInput}/>
+                </label>
+            </form>
         );
     }; 
 
