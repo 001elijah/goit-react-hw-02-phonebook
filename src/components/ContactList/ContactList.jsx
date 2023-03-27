@@ -1,9 +1,10 @@
 import Contact from "components/Contact/Contact";
 
-const ContactList = () => {
+const ContactList = ({contactsProp, removeContact}) => {
+    // console.log(contactsProp);
     return (
         <ul>
-            <Contact />
+            {contactsProp.map(contact => <Contact key={contact.id} contactProp={contact} removeContact={removeContact}/>)}
         </ul>
     );
 };

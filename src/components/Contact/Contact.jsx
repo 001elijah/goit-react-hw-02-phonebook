@@ -1,6 +1,10 @@
-const Contact = () => {
+const Contact = ({ contactProp, removeContact }) => {
+    // console.log(contactProp);
     return (
-        <li>Name Surname</li>
+        <li>
+            <span>{contactProp.name}: </span><span>{contactProp.number}</span>
+            <button type="button" onClick={() => removeContact(contactProp.id)}>Delete</button>
+        </li>
     );
 };
 
