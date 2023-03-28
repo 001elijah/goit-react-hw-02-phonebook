@@ -32,7 +32,7 @@ class App extends Component {
   filterContacts = () => {
     const { contacts, filter } = this.state;
     if(filter === '') return contacts;
-    return contacts.filter(contact => contact.name.includes(filter));
+    return contacts.filter(contact => contact.name.toLocaleLowerCase().includes(filter.toLowerCase()));
   };
 
   removeContact = (id) => {
